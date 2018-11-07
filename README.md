@@ -11,108 +11,108 @@
     ###### APP_NAME=Laravel
     
     &nbsp;
-    APP_ENV=local
+    ###### APP_ENV=local
+    
+    ###### &nbsp;
+    ###### APP_KEY=base64:FSwM5Ak2kmFHAfHW7gYF4T5yybReHPoe49o/YnRdBOg=
     
     &nbsp;
-    APP_KEY=base64:FSwM5Ak2kmFHAfHW7gYF4T5yybReHPoe49o/YnRdBOg=
-    
-    &nbsp;
-    APP_DEBUG=true
-    
-    &nbsp;
-    
-    &nbsp;
-    LOG_CHANNEL=stack
+    ###### APP_DEBUG=true
     
     &nbsp;
     
     &nbsp;
-    DB_CONNECTION=mysql
-    
-    &nbsp;
-    DB_HOST=127.0.0.1
-    
-    &nbsp;
-    DB_PORT=3306
-    
-    &nbsp;
-    DB_DATABASE=work_test
-    
-    &nbsp;
-    DB_USERNAME=
-    
-    &nbsp;
-    DB_PASSWORD=
+    ###### LOG_CHANNEL=stack
     
     &nbsp;
     
     &nbsp;
-    BROADCAST_DRIVER=log
+    ###### DB_CONNECTION=mysql
     
     &nbsp;
-    CACHE_DRIVER=file
+    ###### DB_HOST=127.0.0.1
     
     &nbsp;
-    SESSION_DRIVER=file
+    ###### DB_PORT=3306
     
     &nbsp;
-    SESSION_LIFETIME=120
+    ###### DB_DATABASE=work_test
     
     &nbsp;
-    QUEUE_DRIVER=sync
+    ###### DB_USERNAME=
     
     &nbsp;
-    
-    &nbsp;
-    REDIS_HOST=127.0.0.1
-    
-    &nbsp;
-    REDIS_PASSWORD=null
-    
-    &nbsp;
-    REDIS_PORT=6379
+    ###### DB_PASSWORD=
     
     &nbsp;
     
     &nbsp;
-    MAIL_DRIVER=smtp
+    ###### BROADCAST_DRIVER=log
     
     &nbsp;
-    MAIL_HOST=smtp.mailtrap.io
+    ###### CACHE_DRIVER=file
     
     &nbsp;
-    MAIL_PORT=2525
+    ###### SESSION_DRIVER=file
     
     &nbsp;
-    MAIL_USERNAME=
+    ###### SESSION_LIFETIME=120
     
     &nbsp;
-    MAIL_PASSWORD=
-    
-    &nbsp;
-    MAIL_ENCRYPTION=null
+    ###### QUEUE_DRIVER=sync
     
     &nbsp;
     
     &nbsp;
-    PUSHER_APP_ID=
+    ###### REDIS_HOST=127.0.0.1
     
     &nbsp;
-    PUSHER_APP_KEY=
+    ###### REDIS_PASSWORD=null
     
     &nbsp;
-    PUSHER_APP_SECRET=
-    
-    &nbsp;
-    PUSHER_APP_CLUSTER=mt1
+    ###### REDIS_PORT=6379
     
     &nbsp;
     
     &nbsp;
-    MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
+    ###### MAIL_DRIVER=smtp
     
     &nbsp;
-    MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
+    ###### MAIL_HOST=smtp.mailtrap.io
+    
+    &nbsp;
+    ###### MAIL_PORT=2525
+    
+    &nbsp;
+    ###### MAIL_USERNAME=
+    
+    &nbsp;
+    ###### MAIL_PASSWORD=
+    
+    &nbsp;
+    ###### MAIL_ENCRYPTION=null
+    
+    &nbsp;
+    
+    &nbsp;
+    ###### PUSHER_APP_ID=
+    
+    &nbsp;
+    ###### PUSHER_APP_KEY=
+    
+    &nbsp;
+    ###### PUSHER_APP_SECRET=
+    
+    &nbsp;
+    ###### PUSHER_APP_CLUSTER=mt1
+    
+    &nbsp;
+    
+    &nbsp;
+    ###### MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
+    
+    &nbsp;
+    ###### MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
 5. Colocar en **DB_USERNAME** el user de mysql
 6. Colcoar en **DB_PASSWORD** la clave de mysql
