@@ -176,7 +176,7 @@
     resources\views\pagina\panelAdmin\partials\site-menu
     
     &nbsp;
-    resources\views\layouts\panelAdmin\
+    resources\views\layouts\panelAdmin
     
     &nbsp;
     resources\views\layouts\partials\nav
