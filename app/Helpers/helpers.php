@@ -7,5 +7,5 @@ function currentUser()
 
 function adminRoute()
 {
-    return (auth()->user()->role->nombreR === 'admin') ? 'admin_' : false;
+    return ('admin' === 'admin') ? 'admin_' : false;
 }

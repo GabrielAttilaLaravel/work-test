@@ -10,76 +10,33 @@
         <div id="content">
             @component('pagina.panelAdmin.partials.header')
                 @slot('title', 'All users')
-
-                @slot('button_create')
-                    @include('pagina.panelAdmin.partials.button_create', [
-                         'route' => 'admin_article_create',
-                         'value' => 'Create new article'
-                     ])
-                @endslot
             @endcomponent
 
-
-
             <div class="content-inner">
-                @include('pagina.panelAdmin.partials.search')
                 <table class="table table-hover">
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Full Name</th>
-                            <th class="d-none d-md-block">Email</th>
+                            <th>Name</th>
+                            <th class="d-none d-md-block">Phone</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>Gabriel Moreno</td>
-                            <td class="d-none d-md-block">abc123@gmail.com</td>
-                            <td class="actions-color">
-                                <button type="button" class="btn btn-xs btn-primary">show</button>
-                                <button type="button" class="btn btn-xs btn-warning">edit</button>
-                                <button type="button" class="btn btn-xs btn-danger">delete</button>
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>2</td>
-                            <td>Milagros Silva</td>
-                            <td class="d-none d-md-block">abc234@gmail.com</td>
-                            <td class="actions-color">
-                                <button type="button" class="btn btn-xs btn-primary">show</button>
-                                <button type="button" class="btn btn-xs btn-warning">edit</button>
-                                <button type="button" class="btn btn-xs btn-danger disabled">delete</button>
-                            </td>
-                        </tr>
+                        @foreach($users as $user)
+                            <tr>
+                                <td>{{ $loop->iteration }}</td>
+                                <td>{{ $user->name }}</td>
+                                <td class="d-none d-md-block">{{ $user->phone }}</td>
+                                <td class="actions-color">
+                                    <button type="button" class="btn btn-xs btn-primary"><a href="{{ route('admin_user_perfil_edit', $user) }}">show</a></button>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
-
-                <table class="table table-hover d-block d-sm-none">
-                    <tr>
-                        <td class="col-1 table-title"><b>#</b></td>
-                        <td class="col-11">1</td>
-                    </tr>
-                    <tr>
-                        <td class="table-title"><b>Full Name</b></td>
-                        <td>Gabriel Moreno</td>
-                    </tr>
-                    <tr>
-                        <td class="table-title"><b>Email</b></td>
-                        <td>abc234@gmail.com</td>
-                    </tr>
-                    <tr>
-                        <td class="table-title"><b>Actions</b></td>
-                        <td class="actions-color">
-                            <button type="button" class="btn btn-xs btn-primary">show</button>
-                            <button type="button" class="btn btn-xs btn-warning">edit</button>
-                            <button type="button" class="btn btn-xs btn-danger disabled">delete</button>
-                        </td>
-                    </tr>
-                </table>
             </div>
+                {{ $users->render() }}
         </div>
     @endslot
 

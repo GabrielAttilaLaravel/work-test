@@ -440,6 +440,12 @@ table th{
     font-weight: bold;
 }
 
+.actions-color button a{
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+}
+
 .actions-color .btn-primary:hover {
     border: none!important;
 }

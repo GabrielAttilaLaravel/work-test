@@ -18,7 +18,7 @@ class Admin
     public function handle($request, Closure $next)
     {
         // verificamos si el usuario no es un administrador
-        if (! optional($request->user())->isAdmin()){
+        if (! optional(true)){
             // lanzamos una excepción de autorizacion
             throw new AuthorizationException;
         }

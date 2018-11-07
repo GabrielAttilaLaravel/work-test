@@ -24,4 +24,9 @@ class User extends Authenticatable
     {
         return $this->hasOne(Perfil::class);
     }
+
+    public function pais()
+    {
+        return $this->belongsTo(Pais::class);
+    }
 }

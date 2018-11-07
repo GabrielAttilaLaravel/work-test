@@ -10,48 +10,38 @@
         <div id="content">
             @component('pagina.panelAdmin.partials.header')
                 @slot('title', 'Perfil')
-
-                @slot('button_create')
-                    @include('pagina.panelAdmin.partials.button_create', [
-                         'route' => adminRoute().'company_create',
-                         'value' => 'Register your company'
-                     ])
-                @endslot
             @endcomponent
             <div class="content-inner">
                 <div class="card">
                     <div class="form-wrapper">
-                       <div class="perfil-image ">
-                            <img class="rounded-circle d-none d-sm-block mx-auto d-block" src="{{ asset('img/user.jpg') }}" alt="">
-                        </div>
                         {!! Form::open(['route' => 'login', 'method'=> 'POST']) !!}
-                            <div class="custom-file">
-                                {!! Field::file('file',['lang' => 'es', 'class'=>'custom-file-input','id'=>'validatedCustomFile', 'required' => true]) !!}
-                                <label class="custom-file-label" for="validatedCustomFile">
-                                    Select file
-                                </label>
-                            </div>
-                            {!! Field::text('usermane', null, ['placeholder' => 'Username']) !!}
+                            {!! Field::text('usermane', $user->name, ['ph' => 'Enter name', 'readonly' => true]) !!}
 
-                            {!! Field::text('email', null, ['placeholder' => 'Email']) !!}
+                            {!! Field::number('age', $user->age, ['ph' => 'Enter age' , 'readonly' => true]) !!}
 
-                            {!! Field::text('first_name', null, ['placeholder' => 'First name']) !!}
+                            {!! Field::text('pais', $user->pais->nameP, ['ph' => 'Enter name country', 'readonly' => true]) !!}
 
-                            {!! Field::text('last_name', null, ['placeholder' => 'Last name']) !!}
+                            {!! Field::text('phone', $user->phone, ['ph' => 'Enter phone', 'readonly' => true]) !!}
 
-                            {!! Field::text('country', null, ['placeholder' => 'Country']) !!}
-
-                            {!! Field::text('address', null, ['placeholder' => 'Address']) !!}
-
-                            {!! Field::text('phone', null, ['placeholder' => 'Phone']) !!}
-
-                            {!! Form::submit('Save', ['class' => 'btn btn-primary float-right submit']) !!}
-
+                            <div id="ip" class="form-control form-group" readonly></div>
+                            <div id="browser" class="form-control form-group" readonly></div>
                         {!! Form::close() !!}
                     </div>
                 </div>
             </div>
         </div>
     @endslot
+    @slot('scripts')
+        <script src="http://code.jquery.com/jquery-latest.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bowser/1.9.4/bowser.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.6-rc.0/js/select2.min.js"></script>
+        <script>
+            document.getElementById('browser').innerHTML = bowser.name+' '+bowser.version;
 
+            $.getJSON('https://ipapi.co/json/', function(data) {
+                document.getElementById('ip').innerHTML = data.ip;
+            });
+        </script>
+
+    @endslot
 @endcomponent

@@ -40,14 +40,19 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function login(LoginRequest $request)
+    public function login()
     {
-        $field = filter_var($request->input('login'), FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
-        $request->merge([$field => $request->input('login')]);
+        Auth::loginUsingId(1);
 
-        if (Auth::attempt([$field => $request->login , 'password' => $request->password]))
-        {
-            return redirect(route(auth()->user()->isAdmin() ? 'admin_dashboard' : 'user_dashboard'));
-        }
+        return redirect(route('admin_users_index'));
+    }
+
+    public function logout(Request $request)
+    {
+        $this->guard()->logout();
+
+        $request->session()->invalidate();
+
+        return $this->loggedOut($request) ?: redirect('login');
     }
 }

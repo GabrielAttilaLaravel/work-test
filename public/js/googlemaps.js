@@ -125,9 +125,9 @@ function initMap() {
 
         // obtenemos el pais en base a las coordenadas de la ubicación
         var gCoder = new google.maps.Geocoder();
-        //console.log(lat + ',' + lon);
-        gCoder.geocode({ 'location': gLatLng }, function (results, status) {
-            console.log(results);
+        console.log(lat + ',' + lon);
+        gCoder.geocode({ 'latLng': gLatLng }, function (results, status) {
+            console.log(results[6].address_components[0]);
         });
 
         //searchGeocoder(gMapa);
