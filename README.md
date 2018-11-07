@@ -4,8 +4,7 @@
 
 1. git clone  https://github.com/GabrielAttilaLaravel/work-test.git
 2. Crear una db con el nombre de **work_test**
-3. Ejecutar php artisan migrate:refresh --seed
-4. crear un archivo .env en la raiz y pegar lo siguiente:
+3. crear un archivo .env en la raiz y pegar lo siguiente:
 
     &nbsp;
     APP_NAME=Laravel
@@ -116,4 +115,7 @@
 
 5. Colocar en **DB_USERNAME** el user de mysql
 6. Colcoar en **DB_PASSWORD** la clave de mysql
-7. Ejecutar ejecutar **composer install** para instalar dependencias
+7. Ejecutar php artisan migrate:refresh --seed
+8. Ejecutar ejecutar **composer install** para instalar dependencias
+9. Ejecutar **php artisan serv***
+10. Acceder a: [http://127.0.0.1:8000/register ](http://127.0.0.1:8000/register)
