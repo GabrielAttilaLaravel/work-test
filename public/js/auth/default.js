@@ -1,1 +1,1 @@
-$("body").addClass("bg-dark");
+$(".bgc").addClass("bg-dark");

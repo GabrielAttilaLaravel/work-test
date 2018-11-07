@@ -25,7 +25,7 @@
     {{ $css or ''}}
 </head>
 <body>
-    <div class="container-fluid display-table">
+    <div class="bgc container-fluid display-table">
         <div class="row m-0 display-table-row content">
             {{ $content }}
         </div>

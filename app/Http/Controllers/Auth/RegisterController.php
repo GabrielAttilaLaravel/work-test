@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Models\Pais;
 use App\Models\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -49,11 +50,10 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'username' => 'required|string|max:255|unique:users',
-            'first_name' => 'required|string|max:255',
-            'last_name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
+            'name' => 'required|string|max:255',
+            'age' => 'required|string|max:255',
+            'country' => 'required|string|max:255',
+            'phone' => 'required|string|max:255',
         ]);
     }
 
@@ -65,12 +65,18 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'username' => $data['username'],
-            'first_name' => $data['first_name'],
-            'last_name' => $data['last_name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
+
+        $pais = Pais::firstOrCreate([
+            'nameP' => $data['country'],
         ]);
+
+        $user = User::create([
+            'name' => $data['name'],
+            'age' => $data['age'],
+            'phone' => $data['phone'],
+            'pais_id' => $pais->id
+        ]);
+
+        return $user;
     }
 }
