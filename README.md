@@ -8,7 +8,7 @@
 4. crear un archivo .env en la raiz y pegar lo siguiente:
 
     &nbsp;
-    ##### APP_NAME=Laravel
+    ###### APP_NAME=Laravel
     
     &nbsp;
     APP_ENV=local
