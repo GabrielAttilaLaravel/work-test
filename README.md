@@ -20,7 +20,11 @@ Install:
     APP_DEBUG=true
     
     &nbsp;
+    
+    &nbsp;
     LOG_CHANNEL=stack
+    
+    &nbsp;
     
     &nbsp;
     DB_CONNECTION=mysql
@@ -41,6 +45,8 @@ Install:
     DB_PASSWORD=
     
     &nbsp;
+    
+    &nbsp;
     BROADCAST_DRIVER=log
     
     &nbsp;
@@ -56,6 +62,8 @@ Install:
     QUEUE_DRIVER=sync
     
     &nbsp;
+    
+    &nbsp;
     REDIS_HOST=127.0.0.1
     
     &nbsp;
@@ -63,6 +71,8 @@ Install:
     
     &nbsp;
     REDIS_PORT=6379
+    
+    &nbsp;
     
     &nbsp;
     MAIL_DRIVER=smtp
@@ -83,6 +93,8 @@ Install:
     MAIL_ENCRYPTION=null
     
     &nbsp;
+    
+    &nbsp;
     PUSHER_APP_ID=
     
     &nbsp;
@@ -95,12 +107,14 @@ Install:
     PUSHER_APP_CLUSTER=mt1
     
     &nbsp;
+    
+    &nbsp;
     MIX_PUSHER_APP_KEY="${PUSHER_APP_KEY}"
     
     &nbsp;
     MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
-
+&nbsp;
 5. Colocar en **DB_USERNAME** el user de mysql
 6. Colcoar en **DB_PASSWORD** la clave de mysql
 7. Ejecutar ejecutar **composer install** para instalar dependencias
