@@ -65,18 +65,18 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-
+        // consultamos primero si existe o no un pais para poder registrarlo o no nuevamente
         $pais = Pais::firstOrCreate([
             'nameP' => $data['country'],
         ]);
-
+        // creamos el usuario
         $user = User::create([
             'name' => $data['name'],
             'age' => $data['age'],
             'phone' => $data['phone'],
             'pais_id' => $pais->id
         ]);
-
+        // retornamos el usuario
         return $user;
     }
 }

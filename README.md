@@ -119,3 +119,85 @@
 8. Ejecutar ejecutar **composer install** para instalar dependencias
 9. Ejecutar **php artisan serv***
 10. Acceder a: http://127.0.0.1:8000/register
+
+&nbsp;
+---
+### Codigo en: ###
+
+1. Controller:
+
+    &nbsp;
+    namespace App\Http\Controllers\Admin\Users;
+    
+    &nbsp;
+    namespace App\Http\Controllers\Admin\Users\Perfil;
+    
+    &nbsp;
+    namespace App\Http\Controllers\Admin;
+    
+    &nbsp;
+    namespace App\Http\Controllers\PanelAdmin;
+  
+    &nbsp;
+    namespace App\Http\Controllers\Auth;
+    
+2. Modelos:
+
+    &nbsp;
+    namespace App\Models\Pais;
+    
+    &nbsp;
+    namespace App\Models\Perfil;
+    
+    &nbsp;
+    namespace App\Models\User;
+    
+3. Vistas:
+
+    &nbsp;
+    resources\views\pagina\panelAdmin\index
+    
+    &nbsp;
+    resources\views\pagina\panelAdmin\users\index
+        
+    &nbsp;
+    resources\views\pagina\panelAdmin\users\perfil\edit
+            
+    &nbsp;
+    resources\views\pagina\panelAdmin\partials\footer
+                
+    &nbsp;
+    resources\views\pagina\panelAdmin\partials\header
+    
+    &nbsp;
+    resources\views\pagina\panelAdmin\partials\main-content
+    
+    &nbsp;
+    resources\views\pagina\panelAdmin\partials\site-menu
+    
+    &nbsp;
+    resources\views\layouts\panelAdmin\
+    
+    &nbsp;
+    resources\views\layouts\partials\nav
+    
+    &nbsp;
+    resources\views\auth\login
+    
+    &nbsp;
+    resources\views\auth\register
+    
+    &nbsp;
+    resources\views\auth\login
+    
+    &nbsp;
+    resources\views\errors\403
+    
+    &nbsp;
+    resources\views\errors\404
+    
+    &nbsp;
+    resources\views\errors\419
+    
+    &nbsp;
+    resources\views\errors\partials\errors
