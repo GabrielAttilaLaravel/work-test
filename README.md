@@ -1,6 +1,6 @@
-# work-test
+# work-test #
 
-Install:
+### Install: ###
 
 1. git clone  https://github.com/GabrielAttilaLaravel/work-test.git
 2. Crear una db con el nombre de **work_test**
@@ -8,7 +8,7 @@ Install:
 4. crear un archivo .env en la raiz y pegar lo siguiente:
 
     &nbsp;
-    APP_NAME=Laravel
+    ######APP_NAME=Laravel
     
     &nbsp;
     APP_ENV=local
