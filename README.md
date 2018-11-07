@@ -114,7 +114,6 @@ Install:
     &nbsp;
     MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
-&nbsp;
 5. Colocar en **DB_USERNAME** el user de mysql
 6. Colcoar en **DB_PASSWORD** la clave de mysql
 7. Ejecutar ejecutar **composer install** para instalar dependencias
