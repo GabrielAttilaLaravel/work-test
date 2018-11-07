@@ -118,4 +118,4 @@
 7. Ejecutar php artisan migrate:refresh --seed
 8. Ejecutar ejecutar **composer install** para instalar dependencias
 9. Ejecutar **php artisan serv***
-10. Acceder a: [http://127.0.0.1:8000/register ](http://127.0.0.1:8000/register)
+10. Acceder a: http://127.0.0.1:8000/register
