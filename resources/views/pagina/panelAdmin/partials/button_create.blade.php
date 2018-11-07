@@ -1,0 +1,1 @@
+<a href="{{ route($route) }}" class="btn-create btn btn-xs btn-primary float-right">{{ $value }}</a>

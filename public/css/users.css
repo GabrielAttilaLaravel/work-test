@@ -1,0 +1,6 @@
+@media (max-width: 575px) {
+    table:first-child {
+        display: none;
+    }
+}
+

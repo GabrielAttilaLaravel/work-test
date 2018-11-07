@@ -1,0 +1,32 @@
+.card {
+    margin: 0 15px;
+    padding: 0 30px 0 15px;
+}
+
+.comments-row {
+    margin-bottom: 30px;
+}
+
+.comment-age {
+    font-size: 12px;
+}
+
+.comments-card {
+    margin-top: 10px;
+}
+
+@media (max-width: 615px) {
+    .content-image {
+        display: none;
+    }
+
+    .col-sm-10 {
+        flex: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .col-sm-2 {
+        flex: 100% !important;
+        max-width: 100% !important;
+    }
+}
